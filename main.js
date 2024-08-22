@@ -14,6 +14,8 @@ list.append('turtle');
 
 list.append('turtle2');
 
+list.insertAt('cat', -1);
+
 console.log(list.size());
 console.log(list.toString());
 
@@ -27,6 +29,9 @@ console.log(list.at(2));
 
 console.log(list.find('parrot'));
 console.log(list.find('dg'));
+
+list.removeAt(2);
+console.log(list.toString());
 
 /*list.prepend('bastet');
 

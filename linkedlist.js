@@ -109,4 +109,49 @@ export class LinkedList {
     result = result + 'null';
     return result;
   }
+
+  insertAt(value, index) {
+    const newNode = new Node(value);
+
+    //Special cases
+    if (index <= 0) {
+      return console.log("There isn't item for this index");
+    }
+    if (index === 1) {
+      newNode.nextValue = this.head;
+      this.head = newNode;
+      return;
+    }
+
+    let current = this.head;
+    let previous = null;
+
+    for (let i = 1; i < index; i++) {
+      if (current === null)
+        return console.log("There isn't item for this index");
+      previous = current;
+      current = current.nextValue;
+    }
+
+    newNode.nextValue = current;
+    previous.nextValue = newNode;
+  }
+
+  removeAt(index) {
+    //Special cases
+    if (index <= 0) return console.log("There isn't item for this index");
+    if (this.head === null) return console.log('This list is empty');
+
+    let current = this.head;
+    let previous = null;
+
+    for (let i = 1; i < index; i++) {
+      if (current === null)
+        return console.log("There isn't item for this index");
+      previous = current;
+      current = current.nextValue;
+    }
+
+    previous.nextValue = current.nextValue;
+  }
 }

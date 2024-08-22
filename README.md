@@ -1,5 +1,9 @@
 # Linked List
 
+To test this repository you need to clone it to your computer (git clone https://github.com/mauroagustin99/linkedlist.git)
+then, navigate to the project directory and install the dependencies with: `npm install`
+and use the script with `node main.js` in a terminal.
+
 ## Methods:
 
 `append(value)` adds a new node containing value to the end of the list.
